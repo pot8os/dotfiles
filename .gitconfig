@@ -1,0 +1,36 @@
+[color]
+  ui = auto
+[alias]
+  s = status
+  d = diff
+  dc = diff --cache
+  co = checkout
+  b = branch
+  cb = checkout -b
+  cm = commit -m
+  ca = commit --amend
+  l = log --graph --date=short --pretty=format:'%C(red)%h%Creset %C(green)%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit
+  lp = !"git l" -p
+  p = pull -p
+  f = fetch -p
+  amend = commit --amend --reuse-message=HEAD
+[user]
+	name = So Nakamura
+	email = so@mayson-llc.com
+[merge]
+	diff = vimdiff
+  log = true
+[push]
+	default = current
+[core]
+	editor = vim
+	quotepath = false
+[diff]
+  renames = copies
+[help]
+  autocorrect = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
